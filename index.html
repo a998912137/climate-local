@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新竹縣氣候變遷調適政策</title>
+    <title>新竹縣氣候變遷政策展示</title>
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
@@ -17,159 +17,105 @@
         .container { 
             max-width: 1000px; 
             margin: auto; 
-            background: #ffffff; /* 內容區塊改為白底，模仿範例網頁感 */
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         h1 { 
             color: #004d40; 
             text-align: center; 
             font-size: 2.4rem;
-            margin-bottom: 10px; 
-            font-weight: bold;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #00796b;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px; 
             font-weight: bold;
         }
 
         .header-underline {
             width: 100%;
-            border-bottom: 3px solid #26a69a; 
-            margin-bottom: 50px;
+            border-bottom: 4px solid #26a69a; 
+            margin-bottom: 40px;
         }
 
-        /* 簡報分項小標題樣式 */
-        h2 {
-            color: #006064;
-            font-size: 1.6rem;
+        .card { 
+            background: #ffffff; 
+            border-radius: 12px; 
+            padding: 40px; 
+            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.1); 
+            border: 1px solid #b2dfdb;
+            position: relative; /* 為了讓右下角來源定位 */
+        }
+
+        .link-title { 
+            color: #006064; 
+            font-weight: 800; 
+            font-size: 1.6em; 
+            display: block; 
+            margin-bottom: 25px; 
             border-left: 8px solid #26a69a;
             padding-left: 15px;
-            margin-top: 40px;
-            margin-bottom: 20px;
         }
 
-        .content-section {
-            margin-bottom: 40px;
-            padding: 20px 0;
-            border-bottom: 1px dashed #b2dfdb;
-        }
-
-        .content-section:last-child {
-            border-bottom: none;
-        }
-
-        /* 列表樣式 */
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        .impact-table {
+        /* 簡報嵌入容器 */
+        .iframe-container {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
+            height: 600px; /* 您可以根據需求調整高度 */
+            border: 1px solid #e0e0e0;
+            margin-bottom: 30px;
         }
 
-        .impact-table th, .impact-table td {
-            border: 1px solid #b2dfdb;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .impact-table th {
-            background-color: #f0fdfa;
-            color: #004d40;
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* 資料來源：粉底黑字樣式 */
-        .source-footer {
+        .source-tag {
+            display: inline-block;
             background-color: #fce4ec; /* 粉紅色背景 */
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            text-align: right;
+        }
+
+        .source-tag a {
             color: #000000; /* 黑色文字 */
-            padding: 15px;
-            margin-top: 50px;
-            font-size: 0.95rem;
-            border-left: 5px solid #f06292;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .source-tag a:hover {
+            text-decoration: underline;
+            color: #d81b60;
+        }
+
+        .footer-align {
+            text-align: right;
+            margin-top: 20px;
         }
 
         @media (max-width: 600px) {
-            .container { padding: 25px; }
+            .iframe-container { height: 350px; }
             h1 { font-size: 1.8rem; }
+            .card { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>新竹縣氣候變遷調適執行方案</h1>
-        <div class="subtitle">期程：113-115 年 [cite: 11]</div>
+        <h1>新竹縣氣候變遷政策</h1>
         <div class="header-underline"></div>
 
-        <div class="content-section">
-            <h2>1. 政策架構與推動機制</h2>
-            <p>新竹縣政府於 112 年成立「氣候變遷因應推動會」，由縣長擔任召集人，並由環境保護局擔任執行秘書 [cite: 5, 6, 7]。其核心組織分為：</p>
-            <ul>
-                <li><strong>氣候變遷調適組</strong>：負責分析衝擊程度、界定關鍵領域及研擬調適策略 [cite: 12, 13, 15]。</li>
-                <li><strong>溫室氣體減量組</strong>：推動相關減碳措施。</li>
-            </ul>
-        </div>
+        <div class="card">
+            <span class="link-title">新竹縣氣候變遷政策</span>
+            
+            <div class="iframe-container">
+                <iframe src="https://drive.google.com/file/d/1ZQ__UIwlJe0XUqIcZUtohSRcrHJtXWF6/preview" allow="autoplay"></iframe>
+            </div>
 
-        <div class="content-section">
-            <h2>2. 氣候變遷衝擊影響</h2>
-            <p>針對不同氣候變遷因子對新竹縣造成的衝擊進行評估 [cite: 32, 33]：</p>
-            <table class="impact-table">
-                <thead>
-                    <tr>
-                        <th>氣候變遷因子</th>
-                        <th>受影響領域</th>
-                        <th>衝擊影響簡述 </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>極端降雨增加</td>
-                        <td>土地利用、農業、健康 [cite: 38]</td>
-                        <td>易淹水區排水負荷增加、坡地崩塌風險上升、影響露營場安全 [cite: 39, 41, 42]。</td>
-                    </tr>
-                    <tr>
-                        <td>乾旱災害</td>
-                        <td>水資源、農業、能源產業 [cite: 46]</td>
-                        <td>河川基流量降低影響水質、衝擊科技業與製造業工業用水 [cite: 47, 48]。</td>
-                    </tr>
-                    <tr>
-                        <td>極端高溫</td>
-                        <td>健康、農業、能源產業 [cite: 52]</td>
-                        <td>脆弱群體健康風險增加、高溫製程勞工熱衰竭風險上升 [cite: 53, 55]。</td>
-                    </tr>
-                    <tr>
-                        <td>海平面上升</td>
-                        <td>海岸海洋、農業 [cite: 59]</td>
-                        <td>海岸線退縮致災、新豐掩埋場受侵蝕溢淹疑慮 [cite: 60, 62]。</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="content-section">
-            <h2>3. 關鍵調適領域與目標</h2>
-            <p>根據評估，新竹縣將以下三個領域列為關鍵調適領域 [cite: 66, 100]：</p>
-            <ul>
-                <li><strong>土地利用</strong>：強化土地調適能力與都市總合治水，納入氣候災害風險規劃 [cite: 74, 75]。</li>
-                <li><strong>農業生產及生物多樣性</strong>：建立韌性農業，推廣抗逆境品種並強化設施衝擊因應 [cite: 82, 86, 87]。</li>
-                <li><strong>健康</strong>：提升醫療衛生防疫能力，強化脆弱群體對熱/寒危害的識能與關懷 [cite: 90, 91]。</li>
-            </ul>
-        </div>
-
-        <div class="source-footer">
-            資料來源：新竹縣氣候變遷調適執行方案 (新竹縣政府，2025) [cite: 3, 101]
+            <div class="footer-align">
+                <div class="source-tag">
+                    資料來源：<a href="https://drive.google.com/file/d/1lVH8JmPICrafENUt6V51Ku9crurEXFPw/view?usp=drive_link" target="_blank">《新竹縣氣候變遷調適執行方案（核定本）》</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
