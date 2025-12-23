@@ -7,30 +7,30 @@
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            /* 背景使用乾淨的純白，模仿圖中的現代簡約感 */
             background-color: #ffffff; 
             padding: 40px 20px; 
             line-height: 1.8; 
-            /* 主要文字使用現代感的深鐵灰色 */
-            color: #4a4a4a; 
+            /* 修改點：文字顏色整體加深 */
+            color: #2c3e50; 
             margin: 0;
         }
 
         .container { 
-            max-width: 800px; 
+            /* 修改點：版面拉寬至 1000px */
+            max-width: 1000px; 
             margin: auto; 
         }
 
         h1 { 
-            /* 標題使用截圖中的深藍灰色調 */
-            color: #34495e; 
+            /* 修改點：標題顏色加深 */
+            color: #1a252f; 
             text-align: center; 
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 40px; 
             letter-spacing: 1px;
             padding-bottom: 15px;
-            /* 底線使用截圖中的粉橘色風格 */
-            border-bottom: 4px solid #f5c6c1; 
+            /* 修改點：裝飾線顏色稍微加深以保持視覺平衡 */
+            border-bottom: 4px solid #e5a9a4; 
             display: inline-block;
             width: 100%;
         }
@@ -44,71 +44,70 @@
 
         .card { 
             background: #ffffff; 
-            border-radius: 2px; /* 較銳利的直角轉彎，呈現現代感 */
-            padding: 30px; 
-            /* 輕微的投影，模仿畫布感 */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            border-radius: 4px; 
+            padding: 35px; /* 增加內距，配合寬版面 */
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); 
             transition: all 0.3s ease;
             cursor: pointer;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #e0e0e0;
         }
 
         .card-link:hover .card {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: #f5c6c1; /* 移上去時框線變粉色 */
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            border-color: #e5a9a4; 
         }
 
         .link-title { 
-            /* 標題文字加粗加深 */
-            color: #2c3e50; 
-            font-weight: 700; 
-            font-size: 1.4em; 
+            /* 修改點：項目標題改為深藍黑色 */
+            color: #1a252f; 
+            font-weight: 800; 
+            font-size: 1.45em; 
             display: block; 
             margin-bottom: 12px; 
             line-height: 1.4;
         }
 
         .card-link:hover .link-title {
-            color: #34495e;
-            text-decoration: none; /* 移除底線，改用邊框變化提示 */
+            color: #000000;
         }
 
         .description { 
-            font-size: 1.05em; 
+            font-size: 1.1em; 
             text-align: justify; 
-            color: #7f8c8d; 
-            font-style: normal; /* 取消斜體，模仿圖中的現代字體排版 */
+            /* 修改點：說明文字加深，確保易讀性 */
+            color: #34495e; 
+            font-style: normal;
         }
 
         .read-more {
             display: inline-block;
             text-align: right;
-            /* 模仿截圖中的按鈕配色 */
-            background-color: #f5c6c1; 
+            background-color: #e5a9a4; /* 指示標籤顏色同步加深 */
             color: #ffffff;
-            padding: 8px 20px;
-            border-radius: 0px;
+            padding: 10px 24px;
+            border-radius: 2px;
             font-weight: bold;
-            font-size: 0.9em;
-            margin-top: 15px;
-            letter-spacing: 1px;
+            font-size: 0.95em;
+            margin-top: 20px;
+            letter-spacing: 1.5px;
         }
 
         .card-link:hover .read-more {
-            background-color: #34495e; /* 移上去時按鈕變深色 */
+            background-color: #1a252f; 
         }
 
         .number {
-            color: #f5c6c1; /* 序號使用粉橘色 */
-            margin-right: 12px;
+            /* 修改點：序號加深 */
+            color: #e5a9a4; 
+            margin-right: 15px;
             font-family: "Georgia", serif;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         @media (max-width: 600px) {
-            body { padding: 20px 10px; }
+            body { padding: 20px 15px; }
             h1 { font-size: 1.8rem; }
             .card { padding: 25px; }
         }
