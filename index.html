@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地方氣候變遷政策展示</title>
+    <style>
+        /* 整體背景與字體 */
+        body { 
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
+            background-color: #e8f5e9; /* 模仿截圖中的淺綠色背景 */
+            padding: 40px 10px; 
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            background: #ffffff; /* 中央白色區塊 */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* 模仿截圖 1 的大標題風格 */
+        .main-header {
+            color: #1b5e20; /* 深綠色標題 */
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .header-line {
+            border-bottom: 3px solid #8bc34a; /* 標題下方的綠色橫線 */
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        /* 模仿截圖 3 的藍色側邊條標題 (1. 政策架構與治理) */
+        .sub-header {
+            color: #0d47a1; /* 深藍色文字 */
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-left: 6px solid #2196f3; /* 關鍵的藍色側邊條 */
+            padding-left: 15px;
+            margin: 30px 0 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 表格樣式優化 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6; /* 淺灰色格線 */
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa; /* 標題列淺灰色背景 */
+            color: #495057;
+            width: 25%;
+            font-weight: bold;
+        }
+
+        /* 模擬截圖 1 的淺綠色卡片 (相關網站連結) */
+        .green-card {
+            background-color: #f1f8e9;
+            border: 1px solid #dcedc8;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .green-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+        }
+
+        .card-title {
+            color: #1976d2; /* 卡片內的連結藍色 */
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .card-title:hover {
+            text-decoration: underline;
+        }
+
+        .card-content {
+            color: #555;
+            font-size: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-header">地方氣候變遷政策</div>
+        <div class="header-line"></div>
+
+        <div class="sub-header">1. 政策架構與治理</div>
+        <p>苗栗縣的氣候變遷調適工作依照《氣候變遷因應法》規定，並參照國家調適計畫，確立推動機制：</p>
+
+        <table>
+            <tr>
+                <th>推動核心</th>
+                <td>苗栗縣氣候變遷因應推動會：由縣長擔任召集人，負責審議減緩與調適執行方案、確認相關施政計畫及協調跨部門事務。</td>
+            </tr>
+            <tr>
+                <th>調適基礎</th>
+                <td>本期方案採用 IPCC AR6「全球暖化程度」(GWL) 作為風險評估情境。</td>
+            </tr>
+            <tr>
+                <th>調適領域</th>
+                <td>涵蓋七大關鍵領域（維生基礎設施、水資源、土地利用、海岸及海洋、能源供給及產業、農業生產及生物多樣性、健康）。</td>
+            </tr>
+        </table>
+
+        <div class="sub-header">相關網站連結</div>
+
+        <div class="green-card">
+            <a href="https://tccip.ncdr.nat.gov.tw/" target="_blank" class="card-title">臺灣氣候變遷推估資訊與調適知識平台 (TCCIP)</a>
+            <div class="card-content">
+                提供臺灣氣候變遷科學與技術研究服務為宗旨。團隊成員秉持初衷，不斷精進氣候變遷推估技術與能力。
+            </div>
+        </div>
+
+        <div class="green-card">
+            <a href="#" target="_blank" class="card-title">氣候變遷災害風險調適平臺</a>
+            <div class="card-content">
+                國家災害防救科技中心建置此平臺，希望以「防患於未然」的思維，培植「災害調適能力」！
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
