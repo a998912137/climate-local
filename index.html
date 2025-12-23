@@ -7,34 +7,34 @@
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            /* 【修改位置】網頁最底層的背景顏色 */
-            background-color: #FEDFE1; 
+            /* 【配色：極淺湖水綠背景】參考圖中背景色 */
+            background-color: #e0f2f1; 
             padding: 40px 20px; 
             line-height: 1.8; 
-            /* 【修改位置】內文預設文字顏色 (建議用深色) */
-            color: #2c3e50; 
+            color: #263238; 
             margin: 0;
         }
 
         .container { 
-            /* 【修改位置】版面最大寬度 (例如 1000px 或 1200px) */
             max-width: 1000px; 
             margin: auto; 
         }
 
         h1 { 
-            /* 【修改位置】大標題文字顏色 */
-            color: #1a252f; 
+            /* 【配色：深森林綠文字】參考圖中標題色 */
+            color: #004d40; 
             text-align: center; 
-            font-size: 2.4rem;
-            margin-bottom: 40px; 
-            letter-spacing: 1px;
-            padding-bottom: 15px;
-            /* 【修改位置】大標題底線：厚度(4px)、樣式(solid實線)、顏色(#e5a9a4) */
-            border-bottom: 4px solid #DC9FB4; 
-            /* 【修改位置】標題長度控制：inline-block 為自動長度，100% 為全寬 */
-            display: inline-block;
+            font-size: 2.2rem;
+            margin-bottom: 20px; 
+            font-weight: bold;
+        }
+
+        /* 大標題下方的裝飾橫線 */
+        .header-underline {
             width: 100%;
+            /* 【配色：明亮的藍綠色橫線】 */
+            border-bottom: 3px solid #26a69a; 
+            margin-bottom: 40px;
         }
 
         .card-link {
@@ -45,94 +45,84 @@
         }
 
         .card { 
-            /* 【修改位置】內容框(卡片)的背景顏色 */
+            /* 【內容框背景：純白】在淺綠底色上會顯得很乾淨 */
             background: #ffffff; 
-            /* 【修改位置】圓角程度 (0px 為直角，數字越大越圓) */
-            border-radius: 4px; 
-            padding: 35px; 
-            /* 【修改位置】卡片陰影：控制顏色與模糊度 */
-            box-shadow: 0 4px 15px rgba(229, 169, 164, 0.15); 
+            border-radius: 12px; 
+            padding: 30px; 
+            box-shadow: 0 4px 12px rgba(0, 77, 64, 0.08); 
             transition: all 0.3s ease;
             cursor: pointer;
-            /* 【修改位置】卡片外框線顏色 */
-            border: 1px solid #f9ebea;
+            border: 1px solid #b2dfdb;
         }
 
-        /* 當滑鼠移到卡片上時的效果 */
         .card-link:hover .card {
-            transform: translateY(-4px); /* 向上浮動的高度 */
-            /* 【修改位置】滑鼠移上去時的陰影加強顏色 */
-            box-shadow: 0 12px 35px rgba(229, 169, 164, 0.3);
-            /* 【修改位置】滑鼠移上去時的邊框顏色 */
-            border-color: #e5a9a4; 
+            transform: translateY(-5px);
+            /* 滑鼠移上去時陰影顏色變深 */
+            box-shadow: 0 10px 25px rgba(0, 150, 136, 0.2);
+            border-color: #26a69a; 
         }
 
         .link-title { 
-            /* 【修改位置】項目標題文字顏色 */
-            color: #1a252f; 
-            font-weight: 800; 
-            font-size: 1.45em; 
+            /* 【配色：深海軍藍標題】參考圖中列表標題色 */
+            color: #006064; 
+            font-weight: 700; 
+            font-size: 1.4em; 
             display: block; 
             margin-bottom: 12px; 
-            line-height: 1.4;
+            /* 左側藍色側邊條裝飾，完全模仿截圖風格 */
+            border-left: 5px solid #26a69a;
+            padding-left: 15px;
         }
 
         .description { 
-            /* 【修改位置】說明文字的大小與顏色 */
-            font-size: 1.1em; 
-            color: #34495e; 
+            font-size: 1.05em; 
             text-align: justify; 
-            font-style: normal;
+            color: #455a64; 
         }
 
-        .read-more {
+        .read-more-btn {
             display: inline-block;
-            text-align: right;
-            /* 【修改位置】右下角標籤按鈕背景顏色 */
-            background-color: #e5a9a4; 
-            /* 【修改位置】右下角標籤按鈕文字顏色 */
+            /* 【配色：圖中標誌性的藍綠色按鈕】 */
+            background-color: #26a69a; 
             color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 2px;
+            padding: 8px 30px;
+            border-radius: 20px; /* 圓角膠囊形狀，模仿圖中「查看更多」 */
             font-weight: bold;
-            font-size: 0.95em;
+            font-size: 0.9em;
             margin-top: 20px;
-            letter-spacing: 1.5px;
+            transition: background 0.3s;
         }
 
-        /* 當滑鼠移到卡片上時，按鈕標籤的顏色變化 */
-        .card-link:hover .read-more {
-            background-color: #1a252f; /* 變為深色 */
+        .card-link:hover .read-more-btn {
+            /* 移上去時顏色變深綠 */
+            background-color: #00796b; 
         }
 
         .number {
-            /* 【修改位置】數字序號 (01, 02...) 的顏色 */
-            color: #e5a9a4; 
-            margin-right: 15px;
-            font-family: "Georgia", serif;
+            color: #009688; 
+            margin-right: 8px;
             font-weight: bold;
-            font-size: 1.3em;
         }
 
         @media (max-width: 600px) {
-            /* 手機版縮放微調 */
             body { padding: 20px 15px; }
-            h1 { font-size: 1.8rem; }
-            .card { padding: 25px; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>新竹縣氣候變遷科研成果</h1>
+        <div class="header-underline"></div>
 
         <a href="https://drive.google.com/file/d/1puR2oJpW_lKpxpgfB7ko079jOBmYSbeu/view?usp=drive_link" target="_blank" class="card-link">
             <div class="card">
                 <span class="link-title"><span class="number">01.</span> 新竹縣在地化災防科研使用手冊</span>
-                <div class="description">本手冊是由科技部贊助之「中央與地方防救災情資整合管理研究計畫-新竹縣」所編撰而成...（略）</div>
-                <div style="text-align: right;"><span class="read-more">READ MORE</span></div>
+                <div class="description">本手冊是由科技部贊助之「中央與地方防救災情資整合管理研究計畫-新竹縣」所編撰而成，透過與國家災害防救科技中心的合作...</div>
+                <div style="text-align: center;"><span class="read-more-btn">查看全文 ➔</span></div>
             </div>
         </a>
+
         </div>
 </body>
 </html>
