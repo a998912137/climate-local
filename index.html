@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新竹縣氣候變遷政策展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            background-color: #e0f2f1; /* 背景：淺湖水綠 */
+            /* 背景顏色：參考圖中的極淺綠色 */
+            background-color: #f0f7f6; 
             padding: 40px 20px; 
             line-height: 1.8; 
             color: #2c3e50; 
@@ -20,6 +22,7 @@
         }
 
         h1 { 
+            /* 大標題：深綠色 */
             color: #004d40; 
             text-align: center; 
             font-size: 2.4rem;
@@ -29,35 +32,69 @@
 
         .header-underline {
             width: 100%;
-            border-bottom: 4px solid #26a69a; 
+            border-bottom: 3px solid #26a69a; 
             margin-bottom: 40px;
         }
 
         .card { 
             background: #ffffff; 
-            border-radius: 12px; 
+            border-radius: 8px; 
             padding: 40px; 
-            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.1); 
-            border: 1px solid #b2dfdb;
-            position: relative; /* 為了讓右下角來源定位 */
+            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.05); 
+            border: 1px solid #d1e4e2;
+            position: relative; 
+        }
+
+        /* 標題與資料來源的頂部容器 */
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            flex-wrap: wrap; /* 確保手機版會自動換行 */
         }
 
         .link-title { 
             color: #006064; 
             font-weight: 800; 
             font-size: 1.6em; 
-            display: block; 
-            margin-bottom: 25px; 
             border-left: 8px solid #26a69a;
             padding-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* 資料來源：移動至右上角，粉底黑字 */
+        .source-tag {
+            background-color: #fce4ec; 
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .source-tag a {
+            color: #000000; 
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .source-tag a:hover {
+            color: #d81b60;
+            text-decoration: underline;
+        }
+
+        .fa-external-link-alt {
+            margin-left: 5px;
+            font-size: 0.85em;
         }
 
         /* 簡報嵌入容器 */
         .iframe-container {
             width: 100%;
-            height: 600px; /* 您可以根據需求調整高度 */
+            height: 650px; 
             border: 1px solid #e0e0e0;
-            margin-bottom: 30px;
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         iframe {
@@ -66,34 +103,9 @@
             border: none;
         }
 
-        /* 資料來源：粉底黑字樣式 */
-        .source-tag {
-            display: inline-block;
-            background-color: #fce4ec; /* 粉紅色背景 */
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-size: 0.95em;
-            text-align: right;
-        }
-
-        .source-tag a {
-            color: #000000; /* 黑色文字 */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .source-tag a:hover {
-            text-decoration: underline;
-            color: #d81b60;
-        }
-
-        .footer-align {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .iframe-container { height: 350px; }
+        @media (max-width: 768px) {
+            .card-header { flex-direction: column; }
+            .iframe-container { height: 400px; }
             h1 { font-size: 1.8rem; }
             .card { padding: 20px; }
         }
@@ -105,16 +117,19 @@
         <div class="header-underline"></div>
 
         <div class="card">
-            <span class="link-title">新竹縣氣候變遷政策</span>
+            <div class="card-header">
+                <span class="link-title">新竹縣氣候變遷政策簡介</span>
+                
+                <div class="source-tag">
+                    資料來源 <i class="fas fa-external-link-alt"></i>：
+                    <a href="https://drive.google.com/file/d/1lVH8JmPICrafENUt6V51Ku9crurEXFPw/view?usp=drive_link" target="_blank">
+                        《新竹縣氣候變遷調適執行方案（核定本）》
+                    </a>
+                </div>
+            </div>
             
             <div class="iframe-container">
                 <iframe src="https://drive.google.com/file/d/1ZQ__UIwlJe0XUqIcZUtohSRcrHJtXWF6/preview" allow="autoplay"></iframe>
-            </div>
-
-            <div class="footer-align">
-                <div class="source-tag">
-                    資料來源：<a href="https://drive.google.com/file/d/1lVH8JmPICrafENUt6V51Ku9crurEXFPw/view?usp=drive_link" target="_blank">《新竹縣氣候變遷調適執行方案（核定本）》</a>
-                </div>
             </div>
         </div>
     </div>
