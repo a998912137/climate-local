@@ -8,7 +8,6 @@
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            /* 背景顏色：參考圖中的極淺綠色 */
             background-color: #f0f7f6; 
             padding: 40px 20px; 
             line-height: 1.8; 
@@ -17,12 +16,13 @@
         }
 
         .container { 
-            max-width: 1000px; 
+            /* 【修改位置】將寬度從 1000px 調整為 1200px 或更高 (例如 1400px) */
+            /* 也可以設定為 95% 讓它幾乎滿版 */
+            max-width: 1200px; 
             margin: auto; 
         }
 
         h1 { 
-            /* 大標題：深綠色 */
             color: #004d40; 
             text-align: center; 
             font-size: 2.4rem;
@@ -40,18 +40,17 @@
             background: #ffffff; 
             border-radius: 8px; 
             padding: 40px; 
-            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.05); 
+            box-shadow: 0 4px 20px rgba(0, 77, 64, 0.08); 
             border: 1px solid #d1e4e2;
             position: relative; 
         }
 
-        /* 標題與資料來源的頂部容器 */
         .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 25px;
-            flex-wrap: wrap; /* 確保手機版會自動換行 */
+            flex-wrap: wrap; 
         }
 
         .link-title { 
@@ -63,13 +62,13 @@
             margin-bottom: 10px;
         }
 
-        /* 資料來源：移動至右上角，粉底黑字 */
         .source-tag {
             background-color: #E0FAF8; 
-            padding: 6px 12px;
+            padding: 6px 14px;
             border-radius: 4px;
-            font-size: 0.9em;
+            font-size: 0.95em;
             margin-bottom: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
         }
 
         .source-tag a {
@@ -83,15 +82,11 @@
             text-decoration: underline;
         }
 
-        .fa-external-link-alt {
-            margin-left: 5px;
-            font-size: 0.85em;
-        }
-
         /* 簡報嵌入容器 */
         .iframe-container {
             width: 100%;
-            height: 650px; 
+            /* 【建議調整】寬度變大時，高度也可以同步拉高，比例會更好看 */
+            height: 750px; 
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             overflow: hidden;
@@ -105,7 +100,7 @@
 
         @media (max-width: 768px) {
             .card-header { flex-direction: column; }
-            .iframe-container { height: 400px; }
+            .iframe-container { height: 450px; }
             h1 { font-size: 1.8rem; }
             .card { padding: 20px; }
         }
