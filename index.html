@@ -3,158 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新竹縣氣候變遷科研成果</title>
+    <title>新竹縣氣候變遷調適政策</title>
     <style>
-        /* --- 整體風格設定 --- */
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            /* 背景顏色：極淺湖水綠 */
-            background-color: #e0f2f1; 
+            background-color: #e0f2f1; /* 背景：淺湖水綠 */
             padding: 40px 20px; 
             line-height: 1.8; 
-            /* 主文字顏色：深灰藍 */
             color: #2c3e50; 
             margin: 0;
         }
 
         .container { 
-            /* 版面寬度：拉寬至 1000px */
             max-width: 1000px; 
             margin: auto; 
+            background: #ffffff; /* 內容區塊改為白底，模仿範例網頁感 */
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         h1 { 
-            /* 大標題：深森林綠 */
             color: #004d40; 
             text-align: center; 
             font-size: 2.4rem;
-            margin-bottom: 20px; 
+            margin-bottom: 10px; 
             font-weight: bold;
-            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #00796b;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: bold;
         }
 
         .header-underline {
-            /* 標題下方裝飾線 */
             width: 100%;
-            border-bottom: 4px solid #26a69a; 
-            margin-bottom: 40px;
+            border-bottom: 3px solid #26a69a; 
+            margin-bottom: 50px;
         }
 
-        /* --- 卡片與連結設定 --- */
-        .card-link {
-            text-decoration: none;
-            display: block;
-            margin-bottom: 30px;
-            color: inherit;
-        }
-
-        .card { 
-            /* 卡片底色：純白 */
-            background: #ffffff; 
-            border-radius: 12px; 
-            padding: 35px; 
-            /* 卡片陰影：帶淺綠色調 */
-            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.1); 
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid #b2dfdb;
-        }
-
-        .card-link:hover .card {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 150, 136, 0.2);
-            border-color: #26a69a; 
-        }
-
-        .link-title { 
-            /* 項目標題顏色：深海軍藍 */
-            color: #006064; 
-            font-weight: 800; 
-            font-size: 1.45em; 
-            display: block; 
-            margin-bottom: 15px; 
-            line-height: 1.4;
-            /* 側邊條裝飾 */
-            border-left: 6px solid #26a69a;
+        /* 簡報分項小標題樣式 */
+        h2 {
+            color: #006064;
+            font-size: 1.6rem;
+            border-left: 8px solid #26a69a;
             padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
-        .description { 
-            /* 內文顏色：深灰色，確保易讀性 */
-            font-size: 1.1em; 
-            text-align: justify; 
-            color: #34495e; 
-            font-style: normal;
+        .content-section {
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-bottom: 1px dashed #b2dfdb;
         }
 
-        .read-more-btn {
-            display: inline-block;
-            /* 按鈕顏色：藍綠色膠囊型 */
-            background-color: #26a69a; 
-            color: #ffffff;
-            padding: 10px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 0.95em;
-            margin-top: 20px;
-            letter-spacing: 1px;
-            transition: 0.3s;
+        .content-section:last-child {
+            border-bottom: none;
         }
 
-        .card-link:hover .read-more-btn {
-            background-color: #00796b; 
+        /* 列表樣式 */
+        ul {
+            padding-left: 20px;
         }
 
-        .number {
-            color: #009688; 
-            margin-right: 10px;
-            font-weight: bold;
+        li {
+            margin-bottom: 10px;
+        }
+
+        .impact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .impact-table th, .impact-table td {
+            border: 1px solid #b2dfdb;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .impact-table th {
+            background-color: #f0fdfa;
+            color: #004d40;
+        }
+
+        /* 資料來源：粉底黑字樣式 */
+        .source-footer {
+            background-color: #fce4ec; /* 粉紅色背景 */
+            color: #000000; /* 黑色文字 */
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 0.95rem;
+            border-left: 5px solid #f06292;
         }
 
         @media (max-width: 600px) {
-            body { padding: 20px 15px; }
+            .container { padding: 25px; }
             h1 { font-size: 1.8rem; }
-            .card { padding: 25px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>新竹縣氣候變遷科研成果</h1>
+        <h1>新竹縣氣候變遷調適執行方案</h1>
+        <div class="subtitle">期程：113-115 年 [cite: 11]</div>
         <div class="header-underline"></div>
 
-        <a href="https://drive.google.com/file/d/1puR2oJpW_lKpxpgfB7ko079jOBmYSbeu/view?usp=drive_link" target="_blank" class="card-link">
-            <div class="card">
-                <span class="link-title"><span class="number">01.</span> 新竹縣在地化災防科研使用手冊</span>
-                <div class="description">本手冊是由科技部贊助之「中央與地方防救災情資整合管理研究計畫-新竹縣」所編撰而成，透過與國家災害防救科技中心的合作，針對新竹縣當地的災害特性進行研究，手冊內容涵蓋106年至108年之六項研究，包含地方產業特性與災害潛勢分析、露營地坡地潛勢、觀光景點與空氣污染、近海設施海嘯模擬、空污與十大死因、地震引起的房屋倒塌率等。因篇幅限制，內文僅針對各項科研項目簡單羅列研究目的、研究方法與研究結果，詳細內容可參考新竹縣災害情資網中的「在地化科研成果」。</div>
-                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
-            </div>
-        </a>
+        <div class="content-section">
+            <h2>1. 政策架構與推動機制</h2>
+            <p>新竹縣政府於 112 年成立「氣候變遷因應推動會」，由縣長擔任召集人，並由環境保護局擔任執行秘書 [cite: 5, 6, 7]。其核心組織分為：</p>
+            <ul>
+                <li><strong>氣候變遷調適組</strong>：負責分析衝擊程度、界定關鍵領域及研擬調適策略 [cite: 12, 13, 15]。</li>
+                <li><strong>溫室氣體減量組</strong>：推動相關減碳措施。</li>
+            </ul>
+        </div>
 
-        <a href="https://drive.google.com/file/d/1zmIFeTtfYPhmivKKOoEufwljRIxr48Lu/view?usp=drive_link" target="_blank" class="card-link">
-            <div class="card">
-                <span class="link-title"><span class="number">02.</span> 初探新竹縣韌性調適策略－以「建構韌性城市」操作方法為例</span>
-                <div class="description">隨著全球氣候變遷影響，自然災害事件遽增，氣候變遷調適（CCA）與災害風險減輕（DRR）策略逐漸備受重視，其中《2015-2030 仙台減災綱領》更揭示兩者有共同目標與重疊的策略。本研究著重於氣候變遷加劇所伴隨之災害風險劇增的減災調適作為，藉由減輕災害衝擊、增強地方韌性，檢視新竹縣地區在氣候變遷下極端災害之脆弱性，初步探究新竹縣城鄉區域未來面對災害衝擊與風險不確定性的韌性調適策略，建構新竹縣氣候變遷調適與韌性防災量能。</div>
-                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
-            </div>
-        </a>
+        <div class="content-section">
+            <h2>2. 氣候變遷衝擊影響</h2>
+            <p>針對不同氣候變遷因子對新竹縣造成的衝擊進行評估 [cite: 32, 33]：</p>
+            <table class="impact-table">
+                <thead>
+                    <tr>
+                        <th>氣候變遷因子</th>
+                        <th>受影響領域</th>
+                        <th>衝擊影響簡述 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>極端降雨增加</td>
+                        <td>土地利用、農業、健康 [cite: 38]</td>
+                        <td>易淹水區排水負荷增加、坡地崩塌風險上升、影響露營場安全 [cite: 39, 41, 42]。</td>
+                    </tr>
+                    <tr>
+                        <td>乾旱災害</td>
+                        <td>水資源、農業、能源產業 [cite: 46]</td>
+                        <td>河川基流量降低影響水質、衝擊科技業與製造業工業用水 [cite: 47, 48]。</td>
+                    </tr>
+                    <tr>
+                        <td>極端高溫</td>
+                        <td>健康、農業、能源產業 [cite: 52]</td>
+                        <td>脆弱群體健康風險增加、高溫製程勞工熱衰竭風險上升 [cite: 53, 55]。</td>
+                    </tr>
+                    <tr>
+                        <td>海平面上升</td>
+                        <td>海岸海洋、農業 [cite: 59]</td>
+                        <td>海岸線退縮致災、新豐掩埋場受侵蝕溢淹疑慮 [cite: 60, 62]。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <a href="https://drive.google.com/file/d/1U3-zToaOUecvj4QDRiuYoyXV1AgmHwCo/view?usp=drive_link" target="_blank" class="card-link">
-            <div class="card">
-                <span class="link-title"><span class="number">03.</span> 初探極端災害下新竹縣農業用地之災害風險減輕與氣候變遷調適策略</span>
-                <div class="description">依據最新之國家氣候變遷科學報告（2024）指出，氣候變遷已實質影響當前臺灣之農業生產與生態環境。本研究結合 CCA 與 DRR 方法，應用 TCCIP 氣候變遷災害風險圖資、氣候關鍵指標，以及農地資料流通中心之圖資，針對新竹縣農業用地於未來氣候變遷推估情境下，評估極端水災、坡災、乾旱及高溫等災害風險，分析各區域之災害衝擊程度與風險等級，並初步研擬相應之韌性防災與調適對策。</div>
-                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
-            </div>
-        </a>
+        <div class="content-section">
+            <h2>3. 關鍵調適領域與目標</h2>
+            <p>根據評估，新竹縣將以下三個領域列為關鍵調適領域 [cite: 66, 100]：</p>
+            <ul>
+                <li><strong>土地利用</strong>：強化土地調適能力與都市總合治水，納入氣候災害風險規劃 [cite: 74, 75]。</li>
+                <li><strong>農業生產及生物多樣性</strong>：建立韌性農業，推廣抗逆境品種並強化設施衝擊因應 [cite: 82, 86, 87]。</li>
+                <li><strong>健康</strong>：提升醫療衛生防疫能力，強化脆弱群體對熱/寒危害的識能與關懷 [cite: 90, 91]。</li>
+            </ul>
+        </div>
 
-        <a href="https://drive.google.com/file/d/1d53F1dv15C2VA46baNMF2i_0NC-dB3FW/view?usp=drive_link" target="_blank" class="card-link">
-            <div class="card">
-                <span class="link-title"><span class="number">04.</span> 初探暖化趨勢下新竹縣極端高溫對脆弱人口健康之衝擊與氣候變遷調適策略</span>
-                <div class="description">本研究旨在初探全球暖化趨勢下，新竹縣極端高溫對脆弱人口的衝擊。危害度分析顯示，在未來「增溫 2°C」情境下，竹北市、新豐鄉及寶山鄉的高危害度比例最高。綜合風險評估結果顯示，新竹縣未來中長期高溫災害衝擊之主要熱區為竹東鎮、竹北市、湖口鄉及關西鎮。建議優先針對高風險地區之脆弱性面向，持續研擬並實施調適策略，以強化整體城鄉之氣候韌性。</div>
-                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
-            </div>
-        </a>
-
+        <div class="source-footer">
+            資料來源：新竹縣氣候變遷調適執行方案 (新竹縣政府，2025) [cite: 3, 101]
+        </div>
     </div>
 </body>
 </html>
