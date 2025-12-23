@@ -5,51 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新竹縣氣候變遷科研成果</title>
     <style>
+        /* --- 整體風格設定 --- */
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            /* 【配色：極淺湖水綠背景】參考圖中背景色 */
+            /* 背景顏色：極淺湖水綠 */
             background-color: #e0f2f1; 
             padding: 40px 20px; 
             line-height: 1.8; 
-            color: #263238; 
+            /* 主文字顏色：深灰藍 */
+            color: #2c3e50; 
             margin: 0;
         }
 
         .container { 
+            /* 版面寬度：拉寬至 1000px */
             max-width: 1000px; 
             margin: auto; 
         }
 
         h1 { 
-            /* 【配色：深森林綠文字】參考圖中標題色 */
+            /* 大標題：深森林綠 */
             color: #004d40; 
             text-align: center; 
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 20px; 
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        /* 大標題下方的裝飾橫線 */
         .header-underline {
+            /* 標題下方裝飾線 */
             width: 100%;
-            /* 【配色：明亮的藍綠色橫線】 */
-            border-bottom: 3px solid #26a69a; 
+            border-bottom: 4px solid #26a69a; 
             margin-bottom: 40px;
         }
 
+        /* --- 卡片與連結設定 --- */
         .card-link {
             text-decoration: none;
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: inherit;
         }
 
         .card { 
-            /* 【內容框背景：純白】在淺綠底色上會顯得很乾淨 */
+            /* 卡片底色：純白 */
             background: #ffffff; 
             border-radius: 12px; 
-            padding: 30px; 
-            box-shadow: 0 4px 12px rgba(0, 77, 64, 0.08); 
+            padding: 35px; 
+            /* 卡片陰影：帶淺綠色調 */
+            box-shadow: 0 4px 15px rgba(0, 77, 64, 0.1); 
             transition: all 0.3s ease;
             cursor: pointer;
             border: 1px solid #b2dfdb;
@@ -57,56 +62,59 @@
 
         .card-link:hover .card {
             transform: translateY(-5px);
-            /* 滑鼠移上去時陰影顏色變深 */
-            box-shadow: 0 10px 25px rgba(0, 150, 136, 0.2);
+            box-shadow: 0 12px 30px rgba(0, 150, 136, 0.2);
             border-color: #26a69a; 
         }
 
         .link-title { 
-            /* 【配色：深海軍藍標題】參考圖中列表標題色 */
+            /* 項目標題顏色：深海軍藍 */
             color: #006064; 
-            font-weight: 700; 
-            font-size: 1.4em; 
+            font-weight: 800; 
+            font-size: 1.45em; 
             display: block; 
-            margin-bottom: 12px; 
-            /* 左側藍色側邊條裝飾，完全模仿截圖風格 */
-            border-left: 5px solid #26a69a;
+            margin-bottom: 15px; 
+            line-height: 1.4;
+            /* 側邊條裝飾 */
+            border-left: 6px solid #26a69a;
             padding-left: 15px;
         }
 
         .description { 
-            font-size: 1.05em; 
+            /* 內文顏色：深灰色，確保易讀性 */
+            font-size: 1.1em; 
             text-align: justify; 
-            color: #455a64; 
+            color: #34495e; 
+            font-style: normal;
         }
 
         .read-more-btn {
             display: inline-block;
-            /* 【配色：圖中標誌性的藍綠色按鈕】 */
+            /* 按鈕顏色：藍綠色膠囊型 */
             background-color: #26a69a; 
             color: #ffffff;
-            padding: 8px 30px;
-            border-radius: 20px; /* 圓角膠囊形狀，模仿圖中「查看更多」 */
+            padding: 10px 30px;
+            border-radius: 25px;
             font-weight: bold;
-            font-size: 0.9em;
+            font-size: 0.95em;
             margin-top: 20px;
-            transition: background 0.3s;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
         .card-link:hover .read-more-btn {
-            /* 移上去時顏色變深綠 */
             background-color: #00796b; 
         }
 
         .number {
             color: #009688; 
-            margin-right: 8px;
+            margin-right: 10px;
             font-weight: bold;
         }
 
         @media (max-width: 600px) {
             body { padding: 20px 15px; }
-            h1 { font-size: 1.6rem; }
+            h1 { font-size: 1.8rem; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
@@ -118,11 +126,35 @@
         <a href="https://drive.google.com/file/d/1puR2oJpW_lKpxpgfB7ko079jOBmYSbeu/view?usp=drive_link" target="_blank" class="card-link">
             <div class="card">
                 <span class="link-title"><span class="number">01.</span> 新竹縣在地化災防科研使用手冊</span>
-                <div class="description">本手冊是由科技部贊助之「中央與地方防救災情資整合管理研究計畫-新竹縣」所編撰而成，透過與國家災害防救科技中心的合作...</div>
-                <div style="text-align: center;"><span class="read-more-btn">查看全文 ➔</span></div>
+                <div class="description">本手冊是由科技部贊助之「中央與地方防救災情資整合管理研究計畫-新竹縣」所編撰而成，透過與國家災害防救科技中心的合作，針對新竹縣當地的災害特性進行研究，手冊內容涵蓋106年至108年之六項研究，包含地方產業特性與災害潛勢分析、露營地坡地潛勢、觀光景點與空氣污染、近海設施海嘯模擬、空污與十大死因、地震引起的房屋倒塌率等。因篇幅限制，內文僅針對各項科研項目簡單羅列研究目的、研究方法與研究結果，詳細內容可參考新竹縣災害情資網中的「在地化科研成果」。</div>
+                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
             </div>
         </a>
 
-        </div>
+        <a href="https://drive.google.com/file/d/1zmIFeTtfYPhmivKKOoEufwljRIxr48Lu/view?usp=drive_link" target="_blank" class="card-link">
+            <div class="card">
+                <span class="link-title"><span class="number">02.</span> 初探新竹縣韌性調適策略－以「建構韌性城市」操作方法為例</span>
+                <div class="description">隨著全球氣候變遷影響，自然災害事件遽增，氣候變遷調適（CCA）與災害風險減輕（DRR）策略逐漸備受重視，其中《2015-2030 仙台減災綱領》更揭示兩者有共同目標與重疊的策略。本研究著重於氣候變遷加劇所伴隨之災害風險劇增的減災調適作為，藉由減輕災害衝擊、增強地方韌性，檢視新竹縣地區在氣候變遷下極端災害之脆弱性，初步探究新竹縣城鄉區域未來面對災害衝擊與風險不確定性的韌性調適策略，建構新竹縣氣候變遷調適與韌性防災量能。</div>
+                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1U3-zToaOUecvj4QDRiuYoyXV1AgmHwCo/view?usp=drive_link" target="_blank" class="card-link">
+            <div class="card">
+                <span class="link-title"><span class="number">03.</span> 初探極端災害下新竹縣農業用地之災害風險減輕與氣候變遷調適策略</span>
+                <div class="description">依據最新之國家氣候變遷科學報告（2024）指出，氣候變遷已實質影響當前臺灣之農業生產與生態環境。本研究結合 CCA 與 DRR 方法，應用 TCCIP 氣候變遷災害風險圖資、氣候關鍵指標，以及農地資料流通中心之圖資，針對新竹縣農業用地於未來氣候變遷推估情境下，評估極端水災、坡災、乾旱及高溫等災害風險，分析各區域之災害衝擊程度與風險等級，並初步研擬相應之韌性防災與調適對策。</div>
+                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1d53F1dv15C2VA46baNMF2i_0NC-dB3FW/view?usp=drive_link" target="_blank" class="card-link">
+            <div class="card">
+                <span class="link-title"><span class="number">04.</span> 初探暖化趨勢下新竹縣極端高溫對脆弱人口健康之衝擊與氣候變遷調適策略</span>
+                <div class="description">本研究旨在初探全球暖化趨勢下，新竹縣極端高溫對脆弱人口的衝擊。危害度分析顯示，在未來「增溫 2°C」情境下，竹北市、新豐鄉及寶山鄉的高危害度比例最高。綜合風險評估結果顯示，新竹縣未來中長期高溫災害衝擊之主要熱區為竹東鎮、竹北市、湖口鄉及關西鎮。建議優先針對高風險地區之脆弱性面向，持續研擬並實施調適策略，以強化整體城鄉之氣候韌性。</div>
+                <div style="text-align: right;"><span class="read-more-btn">查看全文內容 ➔</span></div>
+            </div>
+        </a>
+
+    </div>
 </body>
 </html>
