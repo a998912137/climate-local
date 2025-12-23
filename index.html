@@ -7,29 +7,26 @@
     <style>
         body { 
             font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
-            background-color: #ffffff; 
+            /* 修改點：更換背景顏色為極淺粉色 */
+            background-color: #fff5f5; 
             padding: 40px 20px; 
             line-height: 1.8; 
-            /* 修改點：文字顏色整體加深 */
             color: #2c3e50; 
             margin: 0;
         }
 
         .container { 
-            /* 修改點：版面拉寬至 1000px */
             max-width: 1000px; 
             margin: auto; 
         }
 
         h1 { 
-            /* 修改點：標題顏色加深 */
             color: #1a252f; 
             text-align: center; 
             font-size: 2.4rem;
             margin-bottom: 40px; 
             letter-spacing: 1px;
             padding-bottom: 15px;
-            /* 修改點：裝飾線顏色稍微加深以保持視覺平衡 */
             border-bottom: 4px solid #e5a9a4; 
             display: inline-block;
             width: 100%;
@@ -43,23 +40,24 @@
         }
 
         .card { 
+            /* 修改點：純白卡片在淺粉背景下會更立體 */
             background: #ffffff; 
             border-radius: 4px; 
-            padding: 35px; /* 增加內距，配合寬版面 */
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); 
+            padding: 35px; 
+            /* 修改點：調整陰影顏色，使其與背景更融合 */
+            box-shadow: 0 4px 15px rgba(229, 169, 164, 0.15); 
             transition: all 0.3s ease;
             cursor: pointer;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #f9ebea;
         }
 
         .card-link:hover .card {
             transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            box-shadow: 0 12px 35px rgba(229, 169, 164, 0.3);
             border-color: #e5a9a4; 
         }
 
         .link-title { 
-            /* 修改點：項目標題改為深藍黑色 */
             color: #1a252f; 
             font-weight: 800; 
             font-size: 1.45em; 
@@ -75,7 +73,6 @@
         .description { 
             font-size: 1.1em; 
             text-align: justify; 
-            /* 修改點：說明文字加深，確保易讀性 */
             color: #34495e; 
             font-style: normal;
         }
@@ -83,7 +80,7 @@
         .read-more {
             display: inline-block;
             text-align: right;
-            background-color: #e5a9a4; /* 指示標籤顏色同步加深 */
+            background-color: #e5a9a4; 
             color: #ffffff;
             padding: 10px 24px;
             border-radius: 2px;
@@ -98,7 +95,6 @@
         }
 
         .number {
-            /* 修改點：序號加深 */
             color: #e5a9a4; 
             margin-right: 15px;
             font-family: "Georgia", serif;
@@ -148,7 +144,6 @@
                 <div style="text-align: right;"><span class="read-more">READ MORE</span></div>
             </div>
         </a>
-
     </div>
 </body>
 </html>
